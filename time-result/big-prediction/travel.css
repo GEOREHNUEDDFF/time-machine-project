@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+
+:root {
+    --color-gradient: linear-gradient(90deg, #eee, #f9f9f9, #eee);
+    --color-background: #d9d9d9;
+    --color-fa-regular: rgb(255, 255, 255);
+    --color-f: #ff547f;
+    --color-inner: #e97dffee;
+    --color-header: #d798fc;
+    --img-box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
+    --color-card-background: linear-gradient(to left, #252525, #0066ff, #252525);
+    --color-title: #ff0000;
+    --color-info: rgb(89, 0, 255);
+    ;
+    --box-shadow: rgb(83, 9, 255) 0px 7px 29px 0px;
+}
+
+.dark-mode {
+    --color-gradient: linear-gradient(to right, #656871 0%, #888b94 20%, #656871 40%, #656871 100%);
+    --color-background: #414247;
+    --color-card-background: linear-gradient(to left, #0066ff, #00000000, #ffd900);
+    --color-fa-regular: rgb(255, 0, 0);
+    --img-box-shadow: rgb(0, 47, 255) 0px 7px 29px 0px;
+    --color-title: #000a8f;
+    --color-header: #000a8f;
+    --color-info: #ccc;
+    --box-shadow: rgb(255, 251, 0) 0px 5px 15px;
+    --color-f: #ff0000;
+    --color-inner: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url(../big-prediction/imgs/depositphotos_176258480-stock-photo-human-bodies-22hibernation-or-transformed.jpeg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.title1 {
+    position: absolute;
+    color: var(--color-title);
+    top: 320px;
+    left: 280px;
+}
+
+
+
+.title2 {
+    position: absolute;
+    color: var(--color-title);
+    left: 280px;
+    top: 400px;
+}
+
+.title1 f {
+    color: var(--color-f);
+}
+
+.title2 f {
+    color: var(--color-f);
+}
+
+
+
+#toggle {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    border: none;
+    background: var(--color-card-background);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+#toggle i {
+    position: fixed;
+    color: var(--color-fa-regular);
+    top: 4.5%;
+    right: 4%;
+}
+
+.card {
+
+    background: var(--color-card-background);
+    width: 550px;
+    box-shadow: var(--box-shadow);
+    width: 1000px;
+    padding: 4rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+/* -----------------------------------------------------------------------/ */
+
+.card .card-image {
+    margin-left: 400px;
+
+    margin-bottom: 1rem;
+}
+
+.card .card-image img {
+
+    border-radius: 300px;
+    box-shadow: var(--img-box-shadow);
+    width: 400px;
+    aspect-ratio: 4 / 3;
+    height: 400px;
+    object-fit: cover;
+
+}
+
+.card-header {
+    color: var(--color-header);
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 550;
+
+    display: inline-block;
+    margin-bottom: 0.25rem;
+}
+
+.card-info {
+    color: var(--color-info);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card-info loading g #title {
+    position: absolute;
+    color: var(--color-title);
+
+}
+
+.inner2 {
+    position: absolute;
+    font-size: 45px;
+    left: 300px;
+    top: 240px;
+    color: var(--color-inner);
+
+}
+
+.inner2 i {
+    position: absolute;
+    left: 250px;
+    top: 40px;
+}
+
+.inner {
+
+    top: 50px;
+    color: var(--color-inner)
+}
+
+
+
+
+#pre-loader {
+    background: #000000 url(imgs/giphy.gif) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+
+#google_translate_element {
+    position: absolute;
+    width: 350px;
+    top: 150px;
+}
+
+#google_translate_element g {
+    position: absolute;
+    left: 350;
+    top: 5px;
+}

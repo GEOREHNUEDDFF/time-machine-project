@@ -1,0 +1,126 @@
+ @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500;600;700;800&display=swap');
+ body {
+   margin: 0;
+   font-size: 1rem;
+    background: #000000;
+   font-family: Arial, Helvetica, sans-serif;
+ }
+
+ #theVideo {
+   position: fixed;
+   width: 100vw;
+   min-height: 100vh;
+   z-index: -10;
+   /* Makes video a background layer */
+ }
+
+
+
+.playbotton p{
+  position: absolute;
+  color: white;
+  animation: blinker 1s linear infinite;
+  font-size: 50px;
+ left: 670px;
+ top: 500px;
+ display: flex;
+    align-items: flex-end;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.light-button button.bt {
+  position: relative;
+  height: 200px;
+  left: 580px;
+   top: 300px;
+  display: flex;
+  align-items: flex-end;
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.button-holder p{
+  font-size: 30px;
+
+}
+
+.light-button button.bt .button-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  background-color: #ff0000;
+  border-radius: 150px;
+  color: #ff0000;
+  font-weight: 1000;
+   font-size: larger;
+  transition: 300ms;
+  outline:#ff0000 2px solid;
+  outline-offset: 20;
+}
+
+.light-button button.bt .button-holder svg {
+  height: 50px;
+  fill: #ff0000;
+  transition: 300ms;
+}
+
+.light-button button.bt .light-holder {
+  position: absolute;
+  height: 200px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.light-button button.bt .light-holder .dot {
+  position: absolute;
+  top: -170px;
+  left: 150px;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.light-button button.bt .light-holder .light {
+  position: absolute;
+  top: -170px;
+  left: -20px;
+  width: 350px;
+  height: 150px;
+  clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+  background: transparent;
+}
+
+.light-button button.bt:hover .button-holder svg {
+  fill: rgb(0, 0, 0);
+}
+
+.light-button button.bt:hover .button-holder {
+  color: rgb(0, 0, 0);
+  outline: rgb(239, 242, 88) 2px solid;
+  outline-offset: 2px;
+}
+
+.light-button button.bt:hover .light-holder .light {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgb(242, 239, 88) 0%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%);
+}
+
+    #pre-loader {
+      background: #000 url(imgs/fa6aa8b9f02691e42df56f1678e795fc.gif) no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      z-index: 100;
+    }

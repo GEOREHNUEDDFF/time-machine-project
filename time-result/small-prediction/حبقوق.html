@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="x-icon" href="../imgs/alien3.gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="travel.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://kit.fontawesome.com/d2fd933c37.js" crossorigin="anonymous"></script>
+
+    <title>اذهب الى حبقوق النبى</title>
+</head>
+
+<body>
+    <div id="pre-loader"></div>
+
+    <botton id="toggle"><i class="fa-regular fa-lightbulb"></i></botton>
+    <div class="card">
+        <div class="card-image loading">
+            <img src="../imgs/habakok.jpg" />
+        </div>
+        <a href="#" class="card-header loading">
+            <div id="google_translate_element">
+                <g> choose your language ➡</g>
+
+            </div>
+            <div class="inner2">
+                <div id="title2" style="font-size: larger;"></div>
+                <i class="fa-solid fa-arrow-right fa-beat fa-lg"></i>
+            </div>
+
+        </a>
+        <g class="title1">
+            <f>⚔</f>audio in arabic languages<f>⚔</f>
+            <p><audio src="audio/66 (1).mp3 " controls></audio></p>
+        </g>
+        <g class="title2">
+            <f>⚔</f>audio in english languages<f>⚔</f>
+            <p><audio src="audio/66 (2).mp3" controls></audio></p>
+        </g>
+        <p class="card-info loading">
+
+
+        <div class="inner">
+
+            <div id="content3">
+            </div>
+
+            </p>
+
+
+        </div>
+</body>
+
+<script src="travel.js"></script>
+<script>
+    var loader = document.getElementById("pre-loader");
+    window.addEventListener("load", function () {
+        loader.style.display = "none";
+    });
+</script>
+<script type="module">
+
+    const FirebaseConfig = {
+        apiKey: "AIzaSyC8IGgjjdAfA0zh8sb1lOMX_g344AsFOyo",
+        authDomain: "el-kraza-firebase-data.firebaseapp.com",
+        projectId: "el-kraza-firebase-data",
+        storageBucket: "el-kraza-firebase-data.appspot.com",
+        messagingSenderId: "804657168808",
+        appId: "1:804657168808:web:7ef7df5f40d65ef1521d9d",
+        measurementId: "G-V7PMCF43LQ"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(FirebaseConfig);
+    // Get a reference to the database service
+    const db = firebase.firestore();
+    const docRef = db.collection("kraza2").doc("Yn3nKzpvKuhwn5FWZZ6y");
+
+    docRef.get().then((doc) => {
+        if (doc.exists) {
+            const data = doc.data();
+            const titleElement = document.getElementById("title2");
+            const content2Element = document.getElementById("content3");
+            titleElement.textContent = data.title;
+            content2Element.textContent = data.content;
+        } else {
+            console.log("No such document!");
+        }
+    }).catch((error) => {
+        console.error("Error getting document:", error);
+    });
+
+</script>
+</script>
+</body>
+
+</html>
